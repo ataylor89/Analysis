@@ -6,6 +6,7 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{remark}{Remark}
 \newcommand{\inc}[1]{#1\!+\!+}
+\newcommand{\incp}[1]{(#1\!+\!+)}
 \title{The Peano axioms}
 \author{Andrew Taylor}
 \date{July 16 2022}
@@ -174,6 +175,14 @@ For any natural numbers n and m, we have $n + (\inc{m}) = \inc{(n+m)}$.
 
 \begin{proof}
 We will induct on n. In the base case, we have $0 + (\inc{m}) = \inc{m}$, which follows from our definition of addition. We can then substitute $0 + m$ for m and get $0 + (\inc{m}) = \inc{(0+m)}$. We can make this substitution because of our definition of addition. Now suppose inductively that $n + (\inc{m}) = \inc{(n+m)}$. Then $(\inc{n}) + (\inc{m}) = \inc{(n + \inc{m})}$, using our definition of addition. Now using our inductive assumption, we can substitute $\inc{(n+m)}$ into our equation, getting $(\inc{n}) + (\inc{m}) = \inc{( \inc{(n+m)})}$. Using the definition of addition, we can make another substitution, getting $(\inc{n}) + (\inc{m}) = \inc{((\inc{n}) + m)}$. This is what we wanted, and it closes our induction. Thus for any natural numbers n and m, we have $n + (\inc{m}) = \inc{(n+m)}$.
+\end{proof}
+
+\begin{theorem}
+Let n and m be natural numbers. Then $n + m = m + n$. In other words, addition is commutative.
+\end{theorem}
+
+\begin{proof}
+We will fix m and induct on n. For the base case we have $0 + m = m + 0$. The definition of addition tells us that $0 + m = m$. Our lemma tells us that $m + 0 = m$. Thus $0 + m = m + 0$. Now suppose inductively that $n + m = m + n$ for a natural number n. Then $\incp{n} + m = \inc{(n+m)}$ by our definition of addition. And $m + \incp{n} = \inc{(m + n)}$ by our lemma. We can substitute $n + m$ for $m + n$ because of our inductive assumption, and that gives us $\incp{n} + m = m + \incp{n}$, which is what we wanted. This closes our induction. Thus addition is commutative, and $n + m = m + n$ for all natural numbers n and m.
 \end{proof}
 
 \end{document}
