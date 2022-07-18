@@ -5,7 +5,7 @@
 \newtheorem{lemma}{Lemma}
 \newtheorem{theorem}{Theorem}
 \newtheorem{remark}{Remark}
-\newcommand{\inc}[1]{\mathrel{{{#1}+}+}}
+\newcommand{\inc}[1]{#1\!+\!+}
 \title{The Peano axioms}
 \author{Andrew Taylor}
 \date{July 16 2022}
@@ -165,7 +165,15 @@ For any natural number n, $n + 0 = n$.
 \end{lemma}
 
 \begin{proof}
-We will induct on n. In the base case where $n = 0$, we see that $0 + 0 = 0$, which follows from the definition of addition. Suppose inductively that $n + 0 = n$. Then $\inc{(n)} + \ 0 \ = \ \inc{(n+0)}$, which also follows from the definition of addition. We can substitute n for $n + 0$ and we get $\inc{(n)} + \ 0 \ = \ \inc{n}$, which is what we wanted. This closes our induction. Thus $n + 0 = n$ for any natural number n.
+We will induct on n. In the base case where $n = 0$, we see that $0 + 0 = 0$, which follows from the definition of addition. Suppose inductively that $n + 0 = n$. Then $(\inc{n}) + \ 0 \ = \ \inc{(n+0)}$, which also follows from the definition of addition. We can substitute n for $n + 0$ and we get $(\inc{n}) + 0 = \inc{n}$, which is what we wanted. This closes our induction. Thus $n + 0 = n$ for all $n \in \mathbb{N}$.
+\end{proof}
+
+\begin{lemma}
+For any natural numbers n and m, we have $n + (\inc{m}) = \inc{(n+m)}$.
+\end{lemma}
+
+\begin{proof}
+We will induct on n. In the base case, we have $0 + (\inc{m}) = \inc{m}$, which follows from our definition of addition. We can then substitute $0 + m$ for m and get $0 + (\inc{m}) = \inc{(0+m)}$. We can make this substitution because of our definition of addition. Now suppose inductively that $n + (\inc{m}) = \inc{(n+m)}$. Then $(\inc{n}) + (\inc{m}) = \inc{(n + \inc{m})}$, using our definition of addition. Now using our inductive assumption, we can substitute $\inc{(n+m)}$ into our equation, getting $(\inc{n}) + (\inc{m}) = \inc{( \inc{(n+m)})}$. Using the definition of addition, we can make another substitution, getting $(\inc{n}) + (\inc{m}) = \inc{((\inc{n}) + m)}$. This is what we wanted, and it closes our induction. Thus for any natural numbers n and m, we have $n + (\inc{m}) = \inc{(n+m)}$.
 \end{proof}
 
 \end{document}
