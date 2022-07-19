@@ -190,7 +190,7 @@ Let a, b, and c be natural numbers. Then $(a + b) + c = a + (b + c)$. In other w
 \end{theorem}
 
 \begin{proof}
-We will fix a and b, and induct on c. In the base case we have $(a + b) + 0 = a + b$ and $a + (b + 0) = a + b$. Thus $(a + b) + 0 = a + (b + 0)$. Now suppose inductively that $(a + b) + c = a + (b + c)$. We know from our lemma that $(a + b) + \inc{c} = \inc{((a + b) + c)}$. We also know from our lemma that $a + (b + \inc{c}) = a + \inc{(b + c)} = \inc{(a + (b + c))}$. By our inductive assumption, we know that $\inc{(a + (b + c))} = \inc{((a + b) + c)}$. Therefore $(a + b) + \inc{c} = a + (b + \inc{c})$. This closes our induction. Thus $(a + b) + c = a + (b + c)$ for all natural numbers a, b, and c.
+We will fix a and b, and induct on c. In the base case we have $(a + b) + 0 = a + b$ and $a + (b + 0) = a + b$. Thus $(a + b) + 0 = a + (b + 0)$. Now suppose inductively that $(a + b) + c = a + (b + c)$. We know from our lemma that $(a + b) + \inc{c} = \inc{((a + b) + c)}$. We also know from our lemma that $a + (b + \inc{c}) = a + \inc{(b + c)} = \inc{(a + (b + c))}$. By our inductive assumption, we know that $\inc{((a + b) + c)} = \inc{(a + (b + c))}$. Therefore $(a + b) + \inc{c} = a + (b + \inc{c})$. This closes our induction. Thus $(a + b) + c = a + (b + c)$ for all natural numbers a, b, and c.
 \end{proof}
 
 \end{document}
