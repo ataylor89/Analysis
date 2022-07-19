@@ -47,7 +47,7 @@ It's common to construct the natural numbers using set theory. After constructin
 0 is a natural number.
 \end{axiom}
 
-We just created a natural number axiomatically. It's our first natural number. We call it zero. \\
+We have just created a natural number axiomatically. It's our first natural number. We call it zero. \\
 
 To create more natural numbers, we need to define the successor operation.
 
@@ -55,13 +55,7 @@ To create more natural numbers, we need to define the successor operation.
 Let $S(n)$ be the successor operation, where $S(n)$ is the successor of n for every $n \in \mathbb{N}$. The notation $\inc{n}$ is a shorthand for $S(n)$. The successor operation can also be called the increment operation.
 \end{definition}
 
-We just defined the successor operation, also called the increment operation. Now we can write an axiom about it. But what axiom should we write? \\
-
-Let's say we state that the successor to 0 is a natural number. We can axiomatize this statement, certainly, but is it the most useful axiom we can make? \\
-
-Consider this. Suppose the successor to 0 is a natural number. Let's call it 1. Then it's entirely possible that $1 = 0$ and that $1 \neq 0$. But what about the successor to 1? Is the successor to 1 a natural number? We can see that if $1 \neq 0$, then we know nothing about the successor to 1, whether it is a natural number or not, because our axioms do not tell us that. \\
-
-So perhaps we want a more useful axiom. Let's use this one. 
+It's not enough to define the successor operation. We also want to place constraints on what a successor to a natural number can be. For example, we know nothing about the successor to 0. Is it pi? Is it -1? A second axiom is needed to tell us more about the successor of a natural number.
 
 \begin{axiom}
 If n is a natural number, then the successor to n is a natural number. That is, $S(n)$ is a natural number. We can also write $\inc{n}$ is a natural number, since these statements are the same.
